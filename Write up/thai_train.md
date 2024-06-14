@@ -149,59 +149,63 @@ cat nội dung 1 file
 
 cat /path/to/file
 
-![alt text][def14]
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/7aeb9eb8-26d0-4908-bd12-e360bcd6b960)
+
 
 cat dòng thứ <n> trong file
 
 cat -n -E file.txt
 
-![alt text][def13]
+![image-1](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/c0dd75db-c212-4fb9-80a7-7a050bcc66d9)
+
 
 cat nhiều dòng vào 1 file bằng EOF:
 
 EOF là ký tự được khai báo và dùng để kết thúc việc nhập liệu, có thể sử dụng một chuỗi bất kỳ thay thế.
 
 $ cat > simple.txt << "EOF"
-![alt text][def12]
+![image-5](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/0a580262-a342-475e-aad5-9d18bb3e8269)
 
-    
 echo command: 
 echo "Đây là một dòng mới" >> myfile.txt
 
 Dùng echo để chèn thêm 1 dòng vào cuối file.
 
-![alt text][def11]
+![image-6](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/221746c8-e7a9-4023-8538-69a77c9e7212)
 
 Dùng echo để overwirte nội dung của file
 
 echo "Đây là một dòng mới" > myfile.txt
 
-![alt text][def10]
-
+![image-7](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/bb7ba3f5-c746-46e9-a5e8-60c794906a5e)
 
 tail/head command
 
 Lệnh head được sử dụng để xem những dòng đầu tiên của một file.
-![alt text][def9]
+
+ ![image-8](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a79f117d-81ed-493c-ba5f-d444c3e62f3c)
+
 
 head 5 dòng đầu tiên: 
 
 head -n 5 myfile.txt
 
-![alt text][def8]
+![image-9](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/78b6f915-00f0-4226-bb7f-e687708ca2a2)
+
 
 tail và tailf
 Lệnh tail được sử dụng để xem những dòng cuối cùng của một file.
 
 tail [tùy chọn] <tên_file>
 
-![alt text][def7]
+![image-10](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a6a58122-81b5-44e2-aae5-485c679b82fa)
+
 
 hiển thị 5 dòng cuối cùng của file 
 
 tail -n 5 myfile.txt
 
-![alt text][def6]
+![image-11](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/938df0c6-ae7c-44fc-a5c3-c34f496f064e)
 
 Lệnh tailf được sử dụng để theo dõi nội dung cuối cùng của file và cập nhật liên tục khi có sự thay đổi. Nó tương tự như tail -f nhưng được tối ưu hóa cho việc theo dõi log files.
 
@@ -209,10 +213,11 @@ tailf <tên_file>
 
 tailf /var/log/syslog
 
-![alt text][def5]
+![image-12](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/2224ad59-4907-433d-882e-05960f882ae7)
+
 
 tail -n 20 -f /var/log/syslog
-![alt text][def4]
+![image-13](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/bec52a12-045c-4dd7-990c-2ef5cd07d747)
 
 sed command : Lệnh sed (stream editor) trong Unix/Linux là một công cụ mạnh mẽ để tìm kiếm và thay thế chuỗi trong file.
 

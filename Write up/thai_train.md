@@ -18,7 +18,8 @@ ping/hping3 ping đến domain zonecloud.vn sau đó giải thích
 
 Ping zonecloud.vn
 
-![alt text][def16]
+![image-3](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/394dac6c-a6d7-4de2-b71e-03519ce77971)
+
 
 Kích thước gói tin: 64 bytes. Đây là kích thước của gói tin ICMP 
 

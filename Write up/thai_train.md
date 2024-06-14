@@ -225,7 +225,8 @@ Dùng sed để find and replace một string trong file
 
 sed 's/find_string/replace_string/g' filename
 
-![alt text][def3]
+![image-14](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/085874b2-2930-4a9c-9cde-ca3c7270ca5e)
+
 
 's': Bắt đầu một lệnh thay thế.
 'find_string': Chuỗi bạn muốn tìm kiếm.
@@ -235,7 +236,8 @@ filename: Tên file nơi bạn muốn thực hiện thay thế.
 
 Ví dụ: file hi có nội dung new word ta thay thế bằng old word 
 
-![alt text][def2]
+![image-15](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a21462ca-b3cd-4bf1-be54-b90ba42347c2)
+
 
 traceroute/tracert command
 
@@ -243,10 +245,10 @@ Lệnh traceroute (hoặc tracert trên Windows) được sử dụng để theo
 
 traceroute google.com (địa chỉ biến) 
 
+![image-16](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/058cf6d0-8ca4-4baa-afba-b75f445d4225)
 
-![alt text][def]
+![image-17](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a1f679d0-8ef3-45ea-8cdc-9d71523569bc)
 
-![alt text][def17] 
 
 1. Sử dụng mạng Gpon.net 
 2.localhost gói tin chạy dao động 9-10-11s chạy ổn định
@@ -259,14 +261,16 @@ netstat command : sử dụng netstat, người dùng có thể theo dõi và ki
 Hiển thị tất cả các socket TCP đang listen:
 
 netstat -tlnp 
-![alt text][def19]
+![image-18](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/455b11cc-5ae7-4946-9028-c6b5b2423974)
+
 '-t': Chỉ hiển thị thông tin về các socket TCP.
 '-l': Chỉ hiển thị các socket đang listen.
 '-n': Không giải quyết tên máy chủ hoặc tên cổng.
 '-p': Hiển thị tên chương trình và PID của tiến trình đang sử dụng socket.
 
 netstat -ulnp
-![alt text][def18]
+![image-19](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/910abae2-ce7b-475b-8f31-a50f4b52ce2e)
+
 
 '-u': Chỉ hiển thị thông tin về các socket UDP.
 '-l': Chỉ hiển thị các socket đang listen.
@@ -275,7 +279,8 @@ netstat -ulnp
 
 don't resolve hostname
 netstat -nl 
-![alt text][def20]
+![image-20](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/600278dc-790a-422c-b945-4a0dbd807b11)
+
 don't resolve portname
 
 netstat -nl
@@ -283,55 +288,65 @@ netstat -nl
 display process name/PID
 
 netstat -nlp
-![alt text](image-21.png)
+![image-21](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/7fb8902c-46f3-44b8-b299-37aea96cb0e2)
+
 
 
 only show tcp socket 
 
 netstat -nlt
-![alt text](image-22.png)
+![image-22](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/fd658174-b698-4ead-9ed4-347eb179a586)
+
 
 only show udp socket
 
 netstat -nlu
-![alt text](image-23.png)
+![image-23](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/402c4355-1149-4d55-89f8-eb30fccc21bc)
+
 
 sort command : giúp người dùng sắp xếp lại văn bản theo 1 thứ tự nhất định. 
 
 sort theo thứ tự tăng dần 
 sort file.txt
-![alt text][def21]
+![image-24](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/181db60c-14f1-451c-9ae7-d825dd42f12c)
+
 
 sort theo thứ tự giảm dần
 sort -r file.txt 
-![alt text][def22]
+![image-25](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/f26f70ea-488c-400c-ba5b-744247ba566d)
+
 
 sort theo column
 sort -k numbercolum  file.txt
-![alt text][def23]
+![image-26](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/02eacad7-4096-4796-ac64-ff1367d4c349)
+
 uniq command
 Lệnh uniq trong Linux được sử dụng để hiển thị các dòng giống hệt nhau trong tệp văn bản. Lệnh này có thể hữu ích nếu bạn muốn xóa các từ hoặc chuỗi trùng lặp khỏi tệp văn bản. Vì lệnh uniq so sánh các dòng liền kề để tìm các bản sao thừa, nó chỉ hoạt động với các tệp văn bản đã được sắp xếp.
 
 lọc ra các dòng lặp lại trong một file
 uniq tên_tệp_tin
-![alt text][def24]
+![image-27](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d17deff2-494f-47ca-b92a-9c0a9a0e4087)
+
 
 
 lọc ra các dòng lặp lại trong file và đếm số lượng các dòng lặp lại
 uniq -c tên_tệp_tin
-![alt text](image-28.png)
+![image-28](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/39aa3ddc-5bd2-4edf-aa72-c1921c9e7f9d)
+
 
 
 wc command : lệnh wc cho phép bạn đếm số dòng, từ, ký tự và byte của mỗi tệp nhất định hoặc đầu vào tiêu chuẩn và in kết quả.
 
 Đếm số dòng trong file: 
 wc -l tên_tệp_tin
-![alt text][def25]
+![image-29](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/9ac43e2d-3513-4198-bbe0-bddf532c6251)
+
 
 
 Đếm số kí tự trong file:
 wc -m tên_tệp_tin 
-![alt text](image-30.png)
+![image-30](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/be518301-06ab-47ed-85b0-e5236f89f1e1)
+
 
 chmod, chown, chattr command
 Phân quyền trong Linux là một khía cạnh rất quan trọng giúp quản lý quyền truy cập vào các tệp và thư mục trong hệ thống file của bạn
@@ -397,28 +412,4 @@ find . -type f -name "abc" -exec chmod 400 {} \;
 
 
 
-[def]: image-16.png
-[def2]: image-15.png
-[def3]: image-14.png
-[def4]: image-13.png
-[def5]: image-12.png
-[def6]: image-11.png
-[def7]: image-10.png
-[def8]: image-9.png
-[def9]: image-8.png
-[def10]: image-7.png
-[def11]: image-6.png
-[def12]: image-5.png
-[def13]: image-1.png
-[def14]: image.png
-[def15]: image-4.png
-[def16]: image-3.png
-[def17]: image-17.png
-[def18]: image-18.png
-[def19]: image-19.png
-[def20]: image-20.png
-[def21]: image-24.png
-[def22]: image-25.png
-[def23]: image-26.png
-[def24]: image-27.png
-[def25]: image-29.png
+

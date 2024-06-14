@@ -40,8 +40,8 @@ zonecloud.vn: Tên miền hoặc địa chỉ IP của mục tiêu.
 
 -p 80: Cổng đích là 80 (HTTP).
 
+![image-4](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/22912c62-fbbb-488f-a5fc-9d1ce2157aa9)
 
-![alt text][def15]
 
 len=44: Chiều dài của gói tin là 44 bytes.
 

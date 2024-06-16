@@ -1,4 +1,4 @@
- # Command Line: 
+# Command Line: 
 
 
 # telnet command : là công cụ dòng lệnh dùng để kiểm tra và xử lý các kết nối mạng.
@@ -6,7 +6,7 @@ Sử dụng để kiểm tra và kết nối đến các dịch vụ mạng TCP 
 ```
  Telnet [hostname or IP] [port] 
 ```
-nc command: Kết nối từ xa, kiểm tra dịch vụ, chuyển tiếp cổng, quét cổng, truyền tệp
+# nc command: Kết nối từ xa, kiểm tra dịch vụ, chuyển tiếp cổng, quét cổng, truyền tệp
 ```
 nc [options] [hostname or IP] [port]
 ```
@@ -62,22 +62,22 @@ rtt=49.9 ms, 50.1 ms, 50.2 ms: Round-trip time - thời gian hồi đáp của c
 bằng milliseconds (ms).
 
 
-ttl= là gì?
+# Ttl= là gì?
 
 Time to Live (TTL) là giá trị cho biết số lượng bước nhảy (hops) mà gói tin có thể đi qua trước khi bị loại bỏ. Mỗi khi gói tin đi qua một router, giá trị TTL sẽ giảm đi một đơn vị. Nếu TTL giảm về 0, gói tin sẽ bị loại bỏ. TTL có thể cung cấp thông tin về số lượng router mà gói tin đã đi qua từ máy gửi đến máy nhận.
 
-time= là gì? 
+# Time= là gì? 
 
 Đây là thời gian hồi đáp (round-trip time) của gói tin, tính bằng milliseconds (ms). Thời gian này đo lường khoảng thời gian từ khi gói tin được gửi đi cho đến khi nhận được phản hồi từ máy chủ. 
 vd:         Giá trị thấp (như 5.85 ms) cho thấy kết nối mạng giữa máy của bạn và máy chủ zonecloud.vn rất nhanh và ổn định.
 
-ssh command
+# Ssh command
 
 
 Dùng password: Khóa SSH cung cấp một cách an toàn hơn để kết nối với máy chủ so với mật khẩu. Để sử dụng khóa SSH, trước tiên bạn cần tạo một cặp khóa SSH và thêm khóa công khai vào máy chủ từ xa.
-
+```
 ssh username@remote_host
-
+```
 Dùng key: 
 ```
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"

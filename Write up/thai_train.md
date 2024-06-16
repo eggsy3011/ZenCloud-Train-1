@@ -49,27 +49,22 @@ ip=103.130.216.89: Địa chỉ IP của máy chủ phản hồi.
 
 ttl=52: Time to Live của gói tin phản hồi.
 
-id=0: Identifier của gói tin.
-
 sport=0: Cổng nguồn là 0 (do cổng đích mặc định là 0).
 
-flags=RA: Các cờ trong gói tin phản hồi là RST-ACK (Reset and Acknowledge). Điều này thường xảy ra khi cổng đích không mở hoặc không có dịch vụ nào lắng nghe trên cổng đó.
-seq=0, 1, 2: Số thứ tự của các gói tin.
-
+flags=RA: Các cờ trong gói tin phản hồi là RST-ACK (Reset and Acknowledge). 
 win=0: Kích thước cửa sổ TCP là 0.
 
-rtt=49.9 ms, 50.1 ms, 50.2 ms: Round-trip time - thời gian hồi đáp của các gói tin, tính 
-bằng milliseconds (ms).
+rtt=49.9 ms, 50.1 ms, 50.2 ms: Round-trip time - thời gian hồi đáp của các gói tin.
 
 
 # Ttl= là gì?
 
-Time to Live (TTL) là giá trị cho biết số lượng bước nhảy (hops) mà gói tin có thể đi qua trước khi bị loại bỏ. Mỗi khi gói tin đi qua một router, giá trị TTL sẽ giảm đi một đơn vị. Nếu TTL giảm về 0, gói tin sẽ bị loại bỏ. TTL có thể cung cấp thông tin về số lượng router mà gói tin đã đi qua từ máy gửi đến máy nhận.
+Time to Live (TTL) là giá trị cho biết số lượng bước nhảy (hops) mà gói tin có thể đi qua trước khi bị loại bỏ. Mỗi khi gói tin đi qua một router, giá trị TTL sẽ giảm đi một đơn vị. Nếu TTL giảm về 0, gói tin sẽ bị loại bỏ. 
 
 # Time= là gì? 
 
 Đây là thời gian hồi đáp (round-trip time) của gói tin, tính bằng milliseconds (ms). Thời gian này đo lường khoảng thời gian từ khi gói tin được gửi đi cho đến khi nhận được phản hồi từ máy chủ. 
-vd:         Giá trị thấp (như 5.85 ms) cho thấy kết nối mạng giữa máy của bạn và máy chủ zonecloud.vn rất nhanh và ổn định.
+
 
 # Ssh command
 

@@ -4,11 +4,11 @@ Bài tập: Thực hành từng command và note lại quá trình chạy comman
 telnet command : là công cụ dòng lệnh dùng để kiểm tra và xử lý các kết nối mạng.
 Sử dụng để kiểm tra và kết nối đến các dịch vụ mạng TCP đơn giản như HTTP, SMTP, FTP, v.v.
 
-telnet [hostname or IP] [port]
+**Telnet [hostname or IP] [port]**
 
 nc command: Kết nối từ xa, kiểm tra dịch vụ, chuyển tiếp cổng, quét cổng, truyền tệp
 
-nc [options] [hostname or IP] [port]
+**nc [options] [hostname or IP] [port]**
 
 telnet đến port 22 của ip vps lab trả lời port có mở hay không
 
@@ -16,7 +16,7 @@ telnet đến port 20 của ip vps lab trả lời port có mở hay không
 
 ping/hping3 ping đến domain zonecloud.vn sau đó giải thích
 
-Ping zonecloud.vn
+**Ping zonecloud.vn**
 
 ![image-3](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/394dac6c-a6d7-4de2-b71e-03519ce77971)
 
@@ -32,7 +32,7 @@ TTL của gói tin phản hồi: 56.
 Thời gian hồi đáp từ máy chủ : 5.85 ms.
 hping3 :   
 
-hping3 -S zonecloud.vn -p 80
+**hping3 -S zonecloud.vn -p 80**
 
 -S: Gửi gói SYN (SYN flag set).
 

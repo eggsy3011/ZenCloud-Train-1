@@ -101,36 +101,53 @@ scp command : Lệnh scp (Secure Copy) được sử dụng để sao chép các
 
 scp 1 file : 
 
-Từ máy - máy từ xa : scp /path/to/local/file username@remote_host:/path/to/remote/destination
-
-Từ máy từ xa - máy  :scp username@remote_host:/path/to/remote/file /path/to/local/destination
-
+Từ máy - máy từ xa :
+```
+scp /path/to/local/file username@remote_host:/path/to/remote/destination
+```
+Từ máy từ xa - máy  :
+```
+scp username@remote_host:/path/to/remote/file /path/to/local/destination
+```
 scp 1 folder: 
 
-Từ máy - máy từ xa : scp -r /path/to/local/folder username@remote_host:/path/to/remote/destination
+Từ máy - máy từ xa : 
+```
+scp -r /path/to/local/folder username@remote_host:/path/to/remote/destination
+```
 
-
-Từ máy từ xa - máy : scp -r username@remote_host:/path/to/remote/folder /path/to/local/destination
-
+Từ máy từ xa - máy : 
+```
+scp -r username@remote_host:/path/to/remote/folder /path/to/local/destination
+```
  Nếu là port khác : 
+ ```
 scp -P port_number /path/to/local/file username@remote_host:/path/to/remote/destination
+```
 
-
-rsync command : 
+# rsync command : 
 Lệnh rsync được sử dụng để đồng bộ hóa và sao chép tệp tin và thư mục giữa các máy tính từ xa hoặc trong cùng một hệ thống. rsync có khả năng đồng bộ hóa chỉ những phần thay đổi, giúp tiết kiệm băng thông và thời gian. Dưới đây là cách sử dụng rsync để sao chép tệp tin, thư mục, và thực hiện đồng bộ hóa gia tăng (incremental synchronization).
 
-rsync file : 
-Từ máy - máy từ xa: rsync -avz /path/to/local/file username@remote_host:/path/to/remote/destination
+ # rsync file : 
+Từ máy - máy từ xa: 
+```
+rsync -avz /path/to/local/file username@remote_host:/path/to/remote/destination
+```
+Từ máy từ xa - máy:
+```
+rsync -avz username@remote_host:/path/to/remote/file /path/to/local/destination
+```
 
-Từ máy từ xa - máy:rsync -avz username@remote_host:/path/to/remote/file /path/to/local/destination
+# rsync folder : 
+Từ máy - máy từ xa:
+```
+rsync -avz /path/to/local/folder username@remote_host:/path/to/remote/destination
+```
 
-
-rsync folder : 
-Từ máy - máy từ xa:rsync -avz /path/to/local/folder username@remote_host:/path/to/remote/destination
-
-
-Từ máy từ xa - máy:rsync -avz username@remote_host:/path/to/remote/folder /path/to/local/destination
-
+Từ máy từ xa - máy:
+```
+rsync -avz username@remote_host:/path/to/remote/folder /path/to/local/destination
+```
 
 rsync increamental : tự động thực hiện đồng bộ hóa gia tăng, nghĩa là nó chỉ sao chép các tệp tin đã thay đổi hoặc mới. Cú pháp sử dụng vẫn như các ví dụ trên. 
 
@@ -140,46 +157,48 @@ Các tùy chọn thường dùng:
     -v : Verbose, hiển thị thông tin chi tiết quá trình sao chép.
     -z : Compress, nén dữ liệu trong quá trình truyền để tiết kiệm băng thông.
     --delete : Xóa các tệp tin ở đích mà không còn tồn tại ở nguồn, giúp đồng bộ hóa hoàn toàn.
-
+```
 rsync -avz --delete /path/to/local/folder username@remote_host:/path/to/remote/destination
-
+```
+```
 rsync -avz -e "ssh -p port_number" /path/to/local/file_or_folder username@remote_host:/path/to/remote/destination
+```
 
+# cat command: Lệnh cat (concatenate) trong Linux được sử dụng để hiển thị nội dung của tệp tin, kết hợp nhiều tệp tin và chuyển nội dung vào tệp tin khác.
 
-cat command: Lệnh cat (concatenate) trong Linux được sử dụng để hiển thị nội dung của tệp tin, kết hợp nhiều tệp tin và chuyển nội dung vào tệp tin khác.
-
-cat nội dung 1 file 
-
+# cat nội dung 1 file 
+```
 cat /path/to/file
-
+```
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/7aeb9eb8-26d0-4908-bd12-e360bcd6b960)
 
 
-cat dòng thứ <n> trong file
-
+# cat dòng thứ <n> trong file
+```
 cat -n -E file.txt
-
+```
 ![image-1](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/c0dd75db-c212-4fb9-80a7-7a050bcc66d9)
 
 
-cat nhiều dòng vào 1 file bằng EOF:
+# cat nhiều dòng vào 1 file bằng EOF:
 
 EOF là ký tự được khai báo và dùng để kết thúc việc nhập liệu, có thể sử dụng một chuỗi bất kỳ thay thế.
 
 $ cat > simple.txt << "EOF"
 ![image-5](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/0a580262-a342-475e-aad5-9d18bb3e8269)
 
-echo command: 
+# echo command:
+```
 echo "Đây là một dòng mới" >> myfile.txt
-
+```
 Dùng echo để chèn thêm 1 dòng vào cuối file.
 
 ![image-6](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/221746c8-e7a9-4023-8538-69a77c9e7212)
 
-Dùng echo để overwirte nội dung của file
-
+# Dùng echo để overwirte nội dung của file
+```
 echo "Đây là một dòng mới" > myfile.txt
-
+```
 ![image-7](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/bb7ba3f5-c746-46e9-a5e8-60c794906a5e)
 
 tail/head command
@@ -189,45 +208,47 @@ Lệnh head được sử dụng để xem những dòng đầu tiên của mộ
  ![image-8](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a79f117d-81ed-493c-ba5f-d444c3e62f3c)
 
 
-head 5 dòng đầu tiên: 
-
+# Head 5 dòng đầu tiên: 
+```
 head -n 5 myfile.txt
-
+```
 ![image-9](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/78b6f915-00f0-4226-bb7f-e687708ca2a2)
 
 
-tail và tailf
+# Tail và tailf
 Lệnh tail được sử dụng để xem những dòng cuối cùng của một file.
-
+```
 tail [tùy chọn] <tên_file>
-
+```
 ![image-10](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a6a58122-81b5-44e2-aae5-485c679b82fa)
 
 
-hiển thị 5 dòng cuối cùng của file 
+# Hiển thị 5 dòng cuối cùng của file 
 
 tail -n 5 myfile.txt
 
 ![image-11](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/938df0c6-ae7c-44fc-a5c3-c34f496f064e)
 
-Lệnh tailf được sử dụng để theo dõi nội dung cuối cùng của file và cập nhật liên tục khi có sự thay đổi. Nó tương tự như tail -f nhưng được tối ưu hóa cho việc theo dõi log files.
-
+# Lệnh tailf được sử dụng để theo dõi nội dung cuối cùng của file và cập nhật liên tục khi có sự thay đổi. Nó tương tự như tail -f nhưng được tối ưu hóa cho việc theo dõi log files.
+```
 tailf <tên_file>
-
+```
+```
 tailf /var/log/syslog
-
+```
 ![image-12](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/2224ad59-4907-433d-882e-05960f882ae7)
 
-
+```
 tail -n 20 -f /var/log/syslog
+```
 ![image-13](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/bec52a12-045c-4dd7-990c-2ef5cd07d747)
 
-sed command : Lệnh sed (stream editor) trong Unix/Linux là một công cụ mạnh mẽ để tìm kiếm và thay thế chuỗi trong file.
+# Sed command : Lệnh sed (stream editor) trong Unix/Linux là một công cụ mạnh mẽ để tìm kiếm và thay thế chuỗi trong file.
 
-Dùng sed để find and replace một string trong file
-
+Dùng Sed để find and replace một string trong file
+```
 sed 's/find_string/replace_string/g' filename
-
+```
 ![image-14](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/085874b2-2930-4a9c-9cde-ca3c7270ca5e)
 
 
@@ -242,11 +263,11 @@ Ví dụ: file hi có nội dung new word ta thay thế bằng old word
 ![image-15](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a21462ca-b3cd-4bf1-be54-b90ba42347c2)
 
 
-traceroute/tracert command
+# traceroute/tracert command
 
-Lệnh traceroute (hoặc tracert trên Windows) được sử dụng để theo dõi đường đi của các gói tin từ máy tính của bạn đến một máy chủ đích. Nó liệt kê tất cả các thiết bị mạng (routers) mà gói tin đi qua trên đường đến đích. Đây là một công cụ hữu ích để chẩn đoán các vấn đề kết nối mạng.
+# Lệnh traceroute (hoặc tracert trên Windows) được sử dụng để theo dõi đường đi của các gói tin từ máy tính của bạn đến một máy chủ đích. Nó liệt kê tất cả các thiết bị mạng (routers) mà gói tin đi qua trên đường đến đích. Đây là một công cụ hữu ích để chẩn đoán các vấn đề kết nối mạng.
 
-traceroute google.com (địa chỉ biến) 
+# Traceroute google.com (địa chỉ biến) 
 
 ![image-16](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/058cf6d0-8ca4-4baa-afba-b75f445d4225)
 
@@ -259,19 +280,21 @@ traceroute google.com (địa chỉ biến)
 
 Sau khi traceroute xong giải thích chi tiết kết quả trả về
 
-netstat command : sử dụng netstat, người dùng có thể theo dõi và kiểm tra các kết nối mạng đang hoạt động trên hệ thống của họ, giúp họ xác định và giải quyết các vấn đề liên quan đến mạng hoặc bảo mật. 
+# Netstat command : sử dụng netstat, người dùng có thể theo dõi và kiểm tra các kết nối mạng đang hoạt động trên hệ thống của họ, giúp họ xác định và giải quyết các vấn đề liên quan đến mạng hoặc bảo mật. 
 
 Hiển thị tất cả các socket TCP đang listen:
-
-netstat -tlnp 
+```
+netstat -tlnp
+```
 ![image-18](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/455b11cc-5ae7-4946-9028-c6b5b2423974)
 
 '-t': Chỉ hiển thị thông tin về các socket TCP.
 '-l': Chỉ hiển thị các socket đang listen.
 '-n': Không giải quyết tên máy chủ hoặc tên cổng.
 '-p': Hiển thị tên chương trình và PID của tiến trình đang sử dụng socket.
-
+```
 netstat -ulnp
+```
 ![image-19](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/910abae2-ce7b-475b-8f31-a50f4b52ce2e)
 
 
@@ -280,93 +303,108 @@ netstat -ulnp
 '-n': Không giải quyết tên máy chủ hoặc tên cổng.
 '-p': Hiển thị tên chương trình và PID của tiến trình đang sử dụng socket.
 
-don't resolve hostname
-netstat -nl 
+# Don't resolve hostname
+```
+netstat -nl
+``` 
 ![image-20](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/600278dc-790a-422c-b945-4a0dbd807b11)
 
-don't resolve portname
-
+# Don't resolve portname
+```
 netstat -nl
-
-display process name/PID
-
+```
+# Display process name/PID
+```
 netstat -nlp
+```
 ![image-21](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/7fb8902c-46f3-44b8-b299-37aea96cb0e2)
 
 
 
-only show tcp socket 
-
+# Only show tcp socket 
+```
 netstat -nlt
+```
 ![image-22](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/fd658174-b698-4ead-9ed4-347eb179a586)
 
 
-only show udp socket
-
+# Only show udp socket
+```
 netstat -nlu
+```
 ![image-23](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/402c4355-1149-4d55-89f8-eb30fccc21bc)
 
 
-sort command : giúp người dùng sắp xếp lại văn bản theo 1 thứ tự nhất định. 
+# Sort command : giúp người dùng sắp xếp lại văn bản theo 1 thứ tự nhất định. 
 
 sort theo thứ tự tăng dần 
 sort file.txt
 ![image-24](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/181db60c-14f1-451c-9ae7-d825dd42f12c)
 
 
-sort theo thứ tự giảm dần
-sort -r file.txt 
+# Sort theo thứ tự giảm dần
+```
+sort -r file.txt
+``` 
 ![image-25](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/f26f70ea-488c-400c-ba5b-744247ba566d)
 
 
-sort theo column
+# Sort theo column
+```
 sort -k numbercolum  file.txt
+```
 ![image-26](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/02eacad7-4096-4796-ac64-ff1367d4c349)
 
-uniq command
-Lệnh uniq trong Linux được sử dụng để hiển thị các dòng giống hệt nhau trong tệp văn bản. Lệnh này có thể hữu ích nếu bạn muốn xóa các từ hoặc chuỗi trùng lặp khỏi tệp văn bản. Vì lệnh uniq so sánh các dòng liền kề để tìm các bản sao thừa, nó chỉ hoạt động với các tệp văn bản đã được sắp xếp.
+# Uniq command
+# Lệnh uniq trong Linux được sử dụng để hiển thị các dòng giống hệt nhau trong tệp văn bản. Lệnh này có thể hữu ích nếu bạn muốn xóa các từ hoặc chuỗi trùng lặp khỏi tệp văn bản. Vì lệnh uniq so sánh các dòng liền kề để tìm các bản sao thừa, nó chỉ hoạt động với các tệp văn bản đã được sắp xếp.
 
 lọc ra các dòng lặp lại trong một file
-uniq tên_tệp_tin
+```
+Uniq tên_tệp_tin
+```
 ![image-27](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d17deff2-494f-47ca-b92a-9c0a9a0e4087)
 
 
 
-lọc ra các dòng lặp lại trong file và đếm số lượng các dòng lặp lại
+# lọc ra các dòng lặp lại trong file và đếm số lượng các dòng lặp lại
+```
 uniq -c tên_tệp_tin
+```
 ![image-28](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/39aa3ddc-5bd2-4edf-aa72-c1921c9e7f9d)
 
 
 
-wc command : lệnh wc cho phép bạn đếm số dòng, từ, ký tự và byte của mỗi tệp nhất định hoặc đầu vào tiêu chuẩn và in kết quả.
+# Wc command : lệnh wc cho phép bạn đếm số dòng, từ, ký tự và byte của mỗi tệp nhất định hoặc đầu vào tiêu chuẩn và in kết quả.
 
-Đếm số dòng trong file: 
+# Đếm số dòng trong file: 
+```
 wc -l tên_tệp_tin
+```
 ![image-29](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/9ac43e2d-3513-4198-bbe0-bddf532c6251)
 
-
-
-Đếm số kí tự trong file:
+# Đếm số kí tự trong file:
+```
 wc -m tên_tệp_tin 
+```
 ![image-30](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/be518301-06ab-47ed-85b0-e5236f89f1e1)
 
 
-chmod, chown, chattr command
-Phân quyền trong Linux là một khía cạnh rất quan trọng giúp quản lý quyền truy cập vào các tệp và thư mục trong hệ thống file của bạn
+# Chmod, chown, chattr command
+# Phân quyền trong Linux là một khía cạnh rất quan trọng giúp quản lý quyền truy cập vào các tệp và thư mục trong hệ thống file của bạn
 
-Quyền Truy Cập Cơ Bản:
+# Quyền Truy Cập Cơ Bản:
 
     Read (R): Cho phép đọc nội dung của tệp hoặc thư mục.
     Write (W): Cho phép sửa đổi nội dung của tệp hoặc thư mục.
     Execute (X): Cho phép thực thi tệp hoặc truy cập thư mục.
 
-Quyền Áp Dụng Cho Người Dùng:
+# Quyền Áp Dụng Cho Người Dùng:
 
     Chủ Sở Hữu (Owner): Người tạo ra tệp hoặc thư mục, có thể quyết định quyền truy cập.
     Nhóm (Group): Các người dùng thuộc vào một nhóm có thể có các quyền riêng biệt.
     Khác (Others): Tất cả những người dùng khác ngoài chủ sở hữu và nhóm.
 
-chmod mode tên_tệp_tin_đích
+# Chmod mode tên_tệp_tin_đích
 Trong đó, mode là dạng số octal biểu diễn quyền truy cập (ví dụ: 644 cho quyền đọc và ghi cho chủ sở hữu và quyền đọc cho nhóm và người dùng khác). Ví dụ:
 chmod 644 hi lại example.txt
 
@@ -376,10 +414,10 @@ Trong đó:
     u là chủ sở hữu (user), g là nhóm (group), o là những người dùng khác (others), a là tất cả (all).
     + thêm quyền, - gỡ bỏ quyền, = gán quyền.
     r là quyền đọc (read), w là quyền ghi (write), x là quyền thực thi (execute).
-
+```
     chmod u+x example.txt
-
-Thay đổi chủ sở hữu và nhóm với chown
+```
+# Thay đổi chủ sở hữu và nhóm với chown
 
 Để thay đổi chủ sở hữu và nhóm của một tệp tin hoặc thư mục:
           chown user:group tên_tệp_tin_đích
@@ -389,30 +427,37 @@ Lệnh chattr +i là để đặt thuộc tính "immutable" (không thể thay �
 
 
 
-find command: 
+# find command: 
 
 Lệnh find là một công cụ tìm kiếm tệp tin trong hệ thống Linux.
 
 Cho phép người dùng tìm kiếm theo nhiều tiêu chí như tên file, kích thước file, thời gian tạo hoặc sửa đổi file, quyền truy cập file, v.v.
 
 Lệnh find trong linux thường được sử dụng để tìm kiếm các tệp tin trong các thư mục lớn, hoặc để tìm kiếm các tệp tin theo các tiêu chí cụ thể.
-
+```
 find các file có đuôi .log
-
+```
+```
 find . -type f -name "*.log"
-
+```
+```
 find các folder có tên abc
-
+```
+```
 find . -type d -name "abc"
-
+```
+```
 find các file có tên abc
-
+```
+```
 find . -type f -name "abc"
-
+```
+```
 find các file có tên abc và thực hiện phần quyền read only cho file
-
+```
+```
 find . -type f -name "abc" -exec chmod 400 {} \;
-
+```
 
 
 

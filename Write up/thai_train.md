@@ -1,14 +1,14 @@
-Command Line: 
-Bài tập: Thực hành từng command và note lại quá trình chạy command đó. Vào file markdown và lưu tại: <name>/linux/linux-basic/commandLine.md
+ # Command Line: 
 
-telnet command : là công cụ dòng lệnh dùng để kiểm tra và xử lý các kết nối mạng.
+
+# telnet command : là công cụ dòng lệnh dùng để kiểm tra và xử lý các kết nối mạng.
 Sử dụng để kiểm tra và kết nối đến các dịch vụ mạng TCP đơn giản như HTTP, SMTP, FTP, v.v.
 ```
  Telnet [hostname or IP] [port] 
 ```
 nc command: Kết nối từ xa, kiểm tra dịch vụ, chuyển tiếp cổng, quét cổng, truyền tệp
 ```
- nc [options] [hostname or IP] [port]
+nc [options] [hostname or IP] [port]
 ```
 telnet đến port 22 của ip vps lab trả lời port có mở hay không
 
@@ -31,9 +31,9 @@ TTL của gói tin phản hồi: 56.
 
 Thời gian hồi đáp từ máy chủ : 5.85 ms.
 hping3 :   
-
-**hping3 -S zonecloud.vn -p 80**
-
+```
+ hping3 -S zonecloud.vn -p 80
+```
 -S: Gửi gói SYN (SYN flag set).
 
 zonecloud.vn: Tên miền hoặc địa chỉ IP của mục tiêu.
@@ -79,19 +79,22 @@ Dùng password: Khóa SSH cung cấp một cách an toàn hơn để kết nối
 ssh username@remote_host
 
 Dùng key: 
-
+```
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-
+```
+```
 ssh -i /path/to/private_key username@remote_host
-
+```
+```
 ssh-copy-id username@remote_host
-
+```
 Dùng port custom
-
+```
 ssh -p port_number username@remote_host
-
+```
+```
 ssh -i /path/to/private_key -p port_number username@remote_host
-
+```
 
 scp command : Lệnh scp (Secure Copy) được sử dụng để sao chép các tệp tin và thư mục giữa các máy tính từ xa một cách an toàn qua mạng. Dưới đây là cách sử dụng scp để sao chép một tệp tin và một thư mục.
 

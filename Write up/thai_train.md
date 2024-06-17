@@ -6,13 +6,21 @@ Sử dụng để kiểm tra và kết nối đến các dịch vụ mạng TCP 
 ```
  Telnet [hostname or IP] [port] 
 ```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/f451e3cc-47f5-46a6-8866-7c5bca4cda6b)
+
 # nc command: Kết nối từ xa, kiểm tra dịch vụ, chuyển tiếp cổng, quét cổng, truyền tệp
 ```
 nc [options] [hostname or IP] [port]
 ```
 telnet đến port 22 của ip vps lab trả lời port có mở hay không
 
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/90aef39c-28cd-4d64-884a-b6aa3a550f46)
+
+
 telnet đến port 20 của ip vps lab trả lời port có mở hay không
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d4c157c1-5a04-41cd-9489-6970c3b64f64)
+
 
 ping/hping3 ping đến domain zonecloud.vn sau đó giải thích
 ```

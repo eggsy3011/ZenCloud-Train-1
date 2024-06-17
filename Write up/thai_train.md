@@ -1,4 +1,4 @@
-# Command Line: 
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/6c72d7c6-87a2-4bc8-9488-f36bc4110ce8)# Command Line: 
 
 
 # telnet command : là công cụ dòng lệnh dùng để kiểm tra và xử lý các kết nối mạng.
@@ -396,7 +396,6 @@ sort -k 3 filetest.txt
 
  ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/f8534b73-9495-4ff7-9d9f-a9f545da5cc7)
 
-![image-26](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/02eacad7-4096-4796-ac64-ff1367d4c349)
 
 # Uniq command
 # Lệnh uniq trong Linux được sử dụng để hiển thị các dòng giống hệt nhau trong tệp văn bản. Lệnh này có thể hữu ích nếu bạn muốn xóa các từ hoặc chuỗi trùng lặp khỏi tệp văn bản. Vì lệnh uniq so sánh các dòng liền kề để tìm các bản sao thừa, nó chỉ hoạt động với các tệp văn bản đã được sắp xếp.
@@ -405,7 +404,8 @@ lọc ra các dòng lặp lại trong một file
 ```
 Uniq tên_tệp_tin
 ```
-![image-27](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d17deff2-494f-47ca-b92a-9c0a9a0e4087)
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/146290c0-dd8b-4095-9d09-9fe2e47563f5)
+
 
 
 
@@ -413,9 +413,21 @@ Uniq tên_tệp_tin
 ```
 uniq -c tên_tệp_tin
 ```
-![image-28](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/39aa3ddc-5bd2-4edf-aa72-c1921c9e7f9d)
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/0125a1ee-108e-4f24-a8d3-dd9af501092b)
 
+Sử dụng sort trước uniq
 
+Để loại bỏ hoàn toàn các dòng trùng lặp, bạn nên sắp xếp tệp trước:
+```
+sort file.txt | uniq
+```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/1a2c9bb7-e295-4dec-9ea7-aef678e3e7f5)
+
+Sử dụng tùy chọn -d để chỉ hiển thị các dòng bị trùng lặp:
+```
+sort file.txt | uniq -d
+```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d0ddd8bf-6821-4e1d-a9c1-2de16c2ab0c4)
 
 # Wc command : lệnh wc cho phép bạn đếm số dòng, từ, ký tự và byte của mỗi tệp nhất định hoặc đầu vào tiêu chuẩn và in kết quả.
 
@@ -435,6 +447,15 @@ wc -m tên_tệp_tin
 # Chmod, chown, chattr command
 # Phân quyền trong Linux là một khía cạnh rất quan trọng giúp quản lý quyền truy cập vào các tệp và thư mục trong hệ thống file của bạn
 
+Ở đây ta thấy file test có rw--r--r không có quyền execute.
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/1c2e8355-8f49-4e56-be6a-78ae21e7866b)
+
+Ta dùng chmod -R 777 <tên_thư_mục> để đầy đủ phân quyền.
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/19b502f8-c854-4681-ac0a-ef72172c94be)
+
+
 # Quyền Truy Cập Cơ Bản:
 
     Read (R): Cho phép đọc nội dung của tệp hoặc thư mục.
@@ -446,17 +467,11 @@ wc -m tên_tệp_tin
     Chủ Sở Hữu (Owner): Người tạo ra tệp hoặc thư mục, có thể quyết định quyền truy cập.
     Nhóm (Group): Các người dùng thuộc vào một nhóm có thể có các quyền riêng biệt.
     Khác (Others): Tất cả những người dùng khác ngoài chủ sở hữu và nhóm.
-
-# Chmod mode tên_tệp_tin_đích
-Trong đó, mode là dạng số octal biểu diễn quyền truy cập (ví dụ: 644 cho quyền đọc và ghi cho chủ sở hữu và quyền đọc cho nhóm và người dùng khác). Ví dụ:
-chmod 644 hi lại example.txt
-
-chmod [ugoa] [+-=] [rwx] tên_tệp_tin_đích
 Trong đó:
 
     u là chủ sở hữu (user), g là nhóm (group), o là những người dùng khác (others), a là tất cả (all).
     + thêm quyền, - gỡ bỏ quyền, = gán quyền.
-    r là quyền đọc (read), w là quyền ghi (write), x là quyền thực thi (execute).
+   
 ```
     chmod u+x example.txt
 ```
@@ -465,8 +480,17 @@ Trong đó:
 Để thay đổi chủ sở hữu và nhóm của một tệp tin hoặc thư mục:
           chown user:group tên_tệp_tin_đích
 
+đầu tiên ta tạo useradd và group add
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/4bee65ea-8756-484e-9176-4d2bdd745c03)
+
+và thay đổi chủ sỡ hữu và nhóm user1 và group1:
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/83a81736-e890-4a58-a173-5815862c7423) 
+
 Lệnh chattr +i là để đặt thuộc tính "immutable" (không thể thay đổi) cho một tệp tin hoặc thư mục trong hệ thống Linux. Khi một tệp tin hoặc thư mục có thuộc tính này, nó không thể bị xóa, sửa đổi, đổi tên, hoặc di chuyển mà không được gỡ bỏ trước.
     chattr +i tên_tệp_tin_đích
+
+    
 
 
 
@@ -477,30 +501,57 @@ Lệnh find là một công cụ tìm kiếm tệp tin trong hệ thống Linux.
 Cho phép người dùng tìm kiếm theo nhiều tiêu chí như tên file, kích thước file, thời gian tạo hoặc sửa đổi file, quyền truy cập file, v.v.
 
 Lệnh find trong linux thường được sử dụng để tìm kiếm các tệp tin trong các thư mục lớn, hoặc để tìm kiếm các tệp tin theo các tiêu chí cụ thể.
+Ta tạo 3 file để test.
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/e0f7bd31-ef74-498d-9d34-bde7f48aa781)
+
+
 ```
-find các file có đuôi .log
+find . -type f -name "abc1.txt"
+
 ```
-```
-find . -type f -name "*.log"
-```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/9645a947-01eb-40be-87f1-639765de3fba)
+
 ```
 find các folder có tên abc
 ```
 ```
 find . -type d -name "abc"
 ```
+ví dụ ở đây ta đang có folder abc 
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d5f01a29-89cb-4779-8d6a-742cc116fd1a)
+
+thì khi ta ở /home muốn tìm folder abc ta dùng: 
+
+find . -type d -name "abc"
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/269e689b-e80d-438f-9d93-c6656da90d05)
+
+
+
 ```
-find các file có tên abc
+find các file có đuôi .log
 ```
 ```
-find . -type f -name "abc"
+find . -type f -name "*.log"
 ```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/3429640c-1087-4d34-b4f8-98ff16d27511)
+
+
+
 ```
 find các file có tên abc và thực hiện phần quyền read only cho file
 ```
 ```
 find . -type f -name "abc" -exec chmod 400 {} \;
 ```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/9e28ce34-bdcc-4d3a-b2c6-3d755ff7da3d)
+
+khi phân quyền chmod 400 xong ta vào ktra: 
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/81484a01-d604-4cf7-b3cb-52bd0c73540b)
+
 
 
 

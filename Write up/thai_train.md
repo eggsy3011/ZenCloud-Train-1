@@ -196,6 +196,7 @@ cat /path/to/file
 
 # cat dòng thứ <n> trong file
 Đây là nội dung file Test 
+
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/0a9e7c1a-fb0a-4d74-bfe5-de310b9df9b8)
 
 ```
@@ -204,6 +205,7 @@ cat -n -E file.txt
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/3c05b6df-d688-4fc4-9040-c0a8ef92d513)
 
 -n: hiện số dòng ở đầu mỗi dòng.
+
 -E: hiện $ để biết điểm cuối dòng.
 # cat nhiều dòng vào 1 file bằng EOF:
 

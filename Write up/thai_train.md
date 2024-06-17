@@ -95,6 +95,8 @@ Dùng port custom
 ```
 ssh -p port_number username@remote_host
 ```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/0bc6529b-756e-4c2e-b5d2-db425d21a809)
+
 ```
 ssh -i /path/to/private_key -p port_number username@remote_host
 ```
@@ -127,6 +129,18 @@ scp -r username@remote_host:/path/to/remote/folder /path/to/local/destination
  ```
 scp -P port_number /path/to/local/file username@remote_host:/path/to/remote/destination
 ```
+```
+ scp -P 19622 /home/nthai/Desktop/file_backup.txt.zip root@103.162.20.237:/root/mtp
+```
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/bcc6fae7-d69b-462e-a6d4-ca1f8d9c4cd5)
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/56b03249-89fb-4fbe-8447-2b79a2b70848)
+
+máy từ xa về máy : 
+
+
+
 
 # rsync command : 
 Lệnh rsync được sử dụng để đồng bộ hóa và sao chép tệp tin và thư mục giữa các máy tính từ xa hoặc trong cùng một hệ thống. rsync có khả năng đồng bộ hóa chỉ những phần thay đổi, giúp tiết kiệm băng thông và thời gian. Dưới đây là cách sử dụng rsync để sao chép tệp tin, thư mục, và thực hiện đồng bộ hóa gia tăng (incremental synchronization).

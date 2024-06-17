@@ -1,4 +1,4 @@
-![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/6c72d7c6-87a2-4bc8-9488-f36bc4110ce8)# Command Line: 
+# Command Line: 
 
 
 # telnet command : là công cụ dòng lệnh dùng để kiểm tra và xử lý các kết nối mạng.

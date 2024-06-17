@@ -387,6 +387,15 @@ sort -r file.txt
 ```
 sort -k numbercolum  file.txt
 ```
+ví dụ ta có file: 
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/6d41c066-1714-4405-81b1-206a48a774fa)
+
+sort -k 2 filetest.txt
+sort -k 3 filetest.txt
+
+ ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/f8534b73-9495-4ff7-9d9f-a9f545da5cc7)
+
 ![image-26](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/02eacad7-4096-4796-ac64-ff1367d4c349)
 
 # Uniq command

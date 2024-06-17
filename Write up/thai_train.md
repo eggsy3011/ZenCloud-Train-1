@@ -180,6 +180,10 @@ rsync -avz --delete /path/to/local/folder username@remote_host:/path/to/remote/d
 ```
 rsync -avz -e "ssh -p port_number" /path/to/local/file_or_folder username@remote_host:/path/to/remote/destination
 ```
+```
+rsync -avz -e " ssh -p 19622" /home/nthai/Desktop/hi\ lại\ là.txt root@103.162.20.237:/root/mtp
+```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/1225bc1d-888d-4d61-b173-562fe6d185a9)
 
 # cat command: Lệnh cat (concatenate) trong Linux được sử dụng để hiển thị nội dung của tệp tin, kết hợp nhiều tệp tin và chuyển nội dung vào tệp tin khác.
 
@@ -191,12 +195,16 @@ cat /path/to/file
 
 
 # cat dòng thứ <n> trong file
-```
-cat -n -E file.txt
-```
-![image-1](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/c0dd75db-c212-4fb9-80a7-7a050bcc66d9)
+Đây là nội dung file Test 
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/0a9e7c1a-fb0a-4d74-bfe5-de310b9df9b8)
 
+```
+cat -n -E file.txt 
+```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/3c05b6df-d688-4fc4-9040-c0a8ef92d513)
 
+-n: hiện số dòng ở đầu mỗi dòng.
+-E: hiện $ để biết điểm cuối dòng.
 # cat nhiều dòng vào 1 file bằng EOF:
 
 EOF là ký tự được khai báo và dùng để kết thúc việc nhập liệu, có thể sử dụng một chuỗi bất kỳ thay thế.
@@ -303,21 +311,28 @@ Hiển thị tất cả các socket TCP đang listen:
 ```
 netstat -tlnp
 ```
-![image-18](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/455b11cc-5ae7-4946-9028-c6b5b2423974)
+![image-19](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/910abae2-ce7b-475b-8f31-a50f4b52ce2e)
 
 '-t': Chỉ hiển thị thông tin về các socket TCP.
+
 '-l': Chỉ hiển thị các socket đang listen.
+
 '-n': Không giải quyết tên máy chủ hoặc tên cổng.
+
 '-p': Hiển thị tên chương trình và PID của tiến trình đang sử dụng socket.
 ```
 netstat -ulnp
 ```
-![image-19](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/910abae2-ce7b-475b-8f31-a50f4b52ce2e)
+
+![image-18](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/455b11cc-5ae7-4946-9028-c6b5b2423974)
 
 
 '-u': Chỉ hiển thị thông tin về các socket UDP.
+
 '-l': Chỉ hiển thị các socket đang listen.
+
 '-n': Không giải quyết tên máy chủ hoặc tên cổng.
+
 '-p': Hiển thị tên chương trình và PID của tiến trình đang sử dụng socket.
 
 # Don't resolve hostname

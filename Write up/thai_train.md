@@ -1,4 +1,4 @@
-# Command Line: 
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/99ea70be-de73-4508-96c8-f89b7e1b2d69)![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/99ea70be-de73-4508-96c8-f89b7e1b2d69)# Command Line: 
 
 
 # telnet command : là công cụ dòng lệnh dùng để kiểm tra và xử lý các kết nối mạng.
@@ -400,34 +400,20 @@ sort -k 3 filetest.txt
 # Uniq command
 # Lệnh uniq trong Linux được sử dụng để hiển thị các dòng giống hệt nhau trong tệp văn bản. Lệnh này có thể hữu ích nếu bạn muốn xóa các từ hoặc chuỗi trùng lặp khỏi tệp văn bản. Vì lệnh uniq so sánh các dòng liền kề để tìm các bản sao thừa, nó chỉ hoạt động với các tệp văn bản đã được sắp xếp.
 
-lọc ra các dòng lặp lại trong một file
+Để ví dụ về Uniq thì ta tạo 1 tệp tin robo.txt có dạng như sau: 
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/64b2e151-9d94-4e82-a05b-3aa1df34de71)
+
+Ví dụ 1: Loại bỏ các dòng trùng lặp:
+
+Lệnh cơ bản uniq sẽ loại bỏ các dòng trùng lặp :
 ```
-Uniq tên_tệp_tin
+uniq robo.txt 
 ```
-![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/146290c0-dd8b-4095-9d09-9fe2e47563f5)
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/36c968f1-7d9b-48f8-8295-09cdcbe5b071)
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/36c968f1-7d9b-48f8-8295-09cdcbe5b071)
 
 
-
-
-# lọc ra các dòng lặp lại trong file và đếm số lượng các dòng lặp lại
-```
-uniq -c tên_tệp_tin
-```
-![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/0125a1ee-108e-4f24-a8d3-dd9af501092b)
-
-Sử dụng sort trước uniq
-
-Để loại bỏ hoàn toàn các dòng trùng lặp, bạn nên sắp xếp tệp trước:
-```
-sort file.txt | uniq
-```
-![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/1a2c9bb7-e295-4dec-9ea7-aef678e3e7f5)
-
-Sử dụng tùy chọn -d để chỉ hiển thị các dòng bị trùng lặp:
-```
-sort file.txt | uniq -d
-```
-![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d0ddd8bf-6821-4e1d-a9c1-2de16c2ab0c4)
 
 # Wc command : lệnh wc cho phép bạn đếm số dòng, từ, ký tự và byte của mỗi tệp nhất định hoặc đầu vào tiêu chuẩn và in kết quả.
 

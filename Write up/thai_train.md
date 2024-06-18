@@ -90,7 +90,8 @@ Dùng key:
 
 
 #PubkeyAuthentication yes
-AuthorizedKeysFile      .ssh/authorized_keys
+
+# AuthorizedKeysFile      .ssh/authorized_keys
 # Tạo 1 file tên là keys để lưu keys 
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a740deb5-3545-49aa-a577-dac79a0d06bb)

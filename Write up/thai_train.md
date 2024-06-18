@@ -85,6 +85,23 @@ Dùng key:
 ```
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/b846bed6-7bfd-45a4-b92d-3a651a96b981)
+
+Mở file ta vừa đẩy ssh key để thấy key.
+
+chúng ta vô vi /etc/ssh/sshd_config
+
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/e262c5e2-51ea-4c92-8d93-f7efab76642f)
+để coi ssh key có cho xác thực hay không với xem đường dẫn đang ở đâu : 
+
+#PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys
+
+
+
+
+
 ```
 ssh -i /path/to/private_key username@remote_host
 ```

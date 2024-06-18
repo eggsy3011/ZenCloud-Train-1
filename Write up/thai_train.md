@@ -411,7 +411,51 @@ Lệnh cơ bản uniq sẽ loại bỏ các dòng trùng lặp :
 uniq robo.txt 
 ```
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/36c968f1-7d9b-48f8-8295-09cdcbe5b071)
-![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/36c968f1-7d9b-48f8-8295-09cdcbe5b071)
+
+Ví dụ 2: Đếm số lần xuất hiện của các dòng
+
+Sử dụng tùy chọn -c để đếm số lần xuất hiện của mỗi dòng:
+
+```
+uniq -c robo.txt
+```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/92c6447d-70c9-47c1-bf3c-48588892b3e9)
+
+Ví dụ 3: Chỉ hiển thị các dòng bị trùng lặp
+
+Sử dụng tùy chọn -d để chỉ hiển thị các dòng bị trùng lặp:
+
+```
+uniq -d robo.txt 
+
+```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/e4be44cb-1d71-4390-bde6-6c759526778e)
+
+Ví dụ 4: Chỉ hiển thị các dòng không bị trùng lặp
+
+Sử dụng tùy chọn -u để chỉ hiển thị các dòng không bị trùng lặp:
+
+```
+uniq -u  robo.txt 
+```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/f4a4c258-2363-4e59-82ec-db8336eb99cd)
+
+Ví dụ 5: Sắp xếp và loại bỏ các dòng trùng lặp
+
+Để đảm bảo tất cả các dòng trùng lặp được loại bỏ, bạn cần sắp xếp tập tin trước khi dùng uniq:
+```
+sort robo.txt | uniq
+```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/98f82b85-81fe-4e34-8274-209a115e44b4)
+
+Ví dụ 6: Đếm số lần xuất hiện của các dòng sau khi sắp xếp
+
+Kết hợp sort và uniq -c để đếm số lần xuất hiện sau khi sắp xếp:
+
+```
+sort robo.txt | uniq -c
+```
+![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/423ea0d7-cf77-478b-a46a-b866601e69cd)
 
 
 

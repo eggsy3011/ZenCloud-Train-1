@@ -83,7 +83,7 @@ ssh username@remote_host
 ```
 Dùng key: 
 
-chúng ta vô vi /etc/ssh/sshd_config
+# Chúng ta vô vi /etc/ssh/sshd_config
 để coi ssh key có cho xác thực hay không với xem đường dẫn đang ở đâu : 
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/724dad6e-5c30-4a47-bedd-0fe37d6a876d)
@@ -91,42 +91,46 @@ chúng ta vô vi /etc/ssh/sshd_config
 
 #PubkeyAuthentication yes
 AuthorizedKeysFile      .ssh/authorized_keys
-Tạo 1 file tên là keys để lưu keys 
+# Tạo 1 file tên là keys để lưu keys 
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a740deb5-3545-49aa-a577-dac79a0d06bb)
-sau ddó ta tạo key: 
+# Sau ddó ta tạo key: 
 
 ssh-keygen  -t rsa 
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/757499b9-ac61-4ef8-8c02-19f21c5455c5)
 
-lưu tại đường dẫn id_rsa 
+# Lưu tại đường dẫn id_rsa 
+
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d023e3cc-a1d7-4616-9279-5e31a1bc36ec)
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/1e187561-846f-407b-a3cd-7fa769d83f24)
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d2c08118-9d96-466c-90a7-1beaecb9aee6)
 
-rồi ta phân quyền cho  
+# rồi ta phân quyền cho  
+```
 chmod 600 /root/.ssh/authorized_keys 
-
+```
+```
 chmod 700 /root/.ssh/
-
+```
+```
 chmod 700 /root
+```
+# chmod 600: Chủ sở hữu có quyền đọc và viết, không ai khác có quyền gì.
 
-chmod 600: Chủ sở hữu có quyền đọc và viết, không ai khác có quyền gì.
+#chmod 700: Chủ sở hữu có quyền đọc, viết và thực thi, không ai khác có quyền gì.
 
-chmod 700: Chủ sở hữu có quyền đọc, viết và thực thi, không ai khác có quyền gì.
-
-Sau đó ta tải keys về máy mình bằng scp 
+# Sau đó ta tải keys về máy mình bằng scp 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/e5a0f1e9-9394-4159-926d-d5ff4821f165)
 
-Tạo file ssh config và chỉnh sửa bằng vs code :
+# Tạo file ssh config và chỉnh sửa bằng vs code :
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/577b8623-16f9-44d8-93ea-6b169843651d)
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/5399bfdc-e06e-4da7-b9df-d64b7c609f4a)
 
-Ta dùng  ssh -v  -p 1922 root@103.162.20.237  để kiểm tra coi private key có hoạt động hay không?
+# Ta dùng  ssh -v  -p 1922 root@103.162.20.237  để kiểm tra coi private key có hoạt động hay không?
 ```
 ssh -v  -p 1922 root@103.162.20.237 
 ```

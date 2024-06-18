@@ -89,19 +89,20 @@ Dùng key:
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/724dad6e-5c30-4a47-bedd-0fe37d6a876d)
 
 
-#PubkeyAuthentication yes
+# PubkeyAuthentication yes
 
 # AuthorizedKeysFile      .ssh/authorized_keys
-# Tạo 1 file tên là keys để lưu keys 
+
+# Tạo 1 file tên là keys để lưu key: 
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a740deb5-3545-49aa-a577-dac79a0d06bb)
-# Sau ddó ta tạo key: 
+# Sau đó ta tạo key: 
 
 ssh-keygen  -t rsa 
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/757499b9-ac61-4ef8-8c02-19f21c5455c5)
 
-# Lưu tại đường dẫn id_rsa 
+# Lưu tại đường dẫn id_rsa:
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d023e3cc-a1d7-4616-9279-5e31a1bc36ec)
 
@@ -109,7 +110,7 @@ ssh-keygen  -t rsa
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d2c08118-9d96-466c-90a7-1beaecb9aee6)
 
-# rồi ta phân quyền cho  
+# rồi ta phân quyền cho:
 ```
 chmod 600 /root/.ssh/authorized_keys 
 ```

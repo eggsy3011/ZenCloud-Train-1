@@ -120,9 +120,9 @@ chmod 700 /root/.ssh/
 ```
 chmod 700 /root
 ```
-# chmod 600: Chủ sở hữu có quyền đọc và viết, không ai khác có quyền gì.
+# Chmod 600: Chủ sở hữu có quyền đọc và viết, không ai khác có quyền gì.
 
-#chmod 700: Chủ sở hữu có quyền đọc, viết và thực thi, không ai khác có quyền gì.
+# Chmod 700: Chủ sở hữu có quyền đọc, viết và thực thi, không ai khác có quyền gì.
 
 # Sau đó ta tải keys về máy mình bằng scp 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/e5a0f1e9-9394-4159-926d-d5ff4821f165)

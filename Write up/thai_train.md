@@ -140,12 +140,6 @@ ssh -v  -p 1922 root@103.162.20.237
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/2fa1a404-81f7-4153-bb19-a670eaa553fb)
 
-```
-ssh -i /path/to/private_key username@remote_host
-```
-```
-ssh-copy-id username@remote_host
-```
 Dùng port custom
 ```
 ssh -p port_number username@remote_host

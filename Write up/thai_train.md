@@ -1,4 +1,4 @@
-![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/99ea70be-de73-4508-96c8-f89b7e1b2d69)![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/99ea70be-de73-4508-96c8-f89b7e1b2d69)# Command Line: 
+# Command Line: 
 
 
 # telnet command : là công cụ dòng lệnh dùng để kiểm tra và xử lý các kết nối mạng.
@@ -87,19 +87,19 @@ Dùng key:
 để coi ssh key có cho xác thực hay không với xem đường dẫn đang ở đâu : 
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/724dad6e-5c30-4a47-bedd-0fe37d6a876d)
-
-
-# PubkeyAuthentication yes
-
-# AuthorizedKeysFile      .ssh/authorized_keys
-
+```
+PubkeyAuthentication yes
+```
+```
+ AuthorizedKeysFile      .ssh/authorized_keys
+```
 # Tạo 1 file tên là keys để lưu key: 
 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/a740deb5-3545-49aa-a577-dac79a0d06bb)
 # Sau đó ta tạo key: 
-
+```
 ssh-keygen  -t rsa 
-
+```
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/757499b9-ac61-4ef8-8c02-19f21c5455c5)
 
 # Lưu tại đường dẫn id_rsa:
@@ -111,19 +111,17 @@ ssh-keygen  -t rsa
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/d2c08118-9d96-466c-90a7-1beaecb9aee6)
 
 # rồi ta phân quyền cho:
-```
 chmod 600 /root/.ssh/authorized_keys 
-```
-```
+
 chmod 700 /root/.ssh/
-```
-```
+
 chmod 700 /root
 ```
-# Chmod 600: Chủ sở hữu có quyền đọc và viết, không ai khác có quyền gì.
-
-# Chmod 700: Chủ sở hữu có quyền đọc, viết và thực thi, không ai khác có quyền gì.
-
+ Chmod 600: Chủ sở hữu có quyền đọc và viết, không ai khác có quyền gì.
+```
+```
+Chmod 700: Chủ sở hữu có quyền đọc, viết và thực thi, không ai khác có quyền gì.
+```
 # Sau đó ta tải keys về máy mình bằng scp 
 ![image](https://github.com/eggsy3011/ZenCloud-Train-1/assets/108015833/e5a0f1e9-9394-4159-926d-d5ff4821f165)
 
